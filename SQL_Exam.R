@@ -1,5 +1,6 @@
 library("readxl")
 library("sqldf")
+library("openxlsx")
 
 # 엑셀 파일의 내용을 Student 변수에 데이터프레임 구조로 저장하기
 student = read_excel(path="data/student.xlsx",  sheet="Sheet1", col_names=TRUE)
