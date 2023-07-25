@@ -34,18 +34,24 @@ sqldf("SELECT * FROM student WHERE AGE <=23 ORDER BY AGE DESC, NAME")
 
 # 벡터 안에 특정 글자 조회하기(LIKE % 활용)
 # 예 : ‘김’으로 시작하는 사람만 조회하기 
-sqldf("SELECT * FROM student WHERE NAME LIKE '김%")
+sqldf("SELECT * FROM student WHERE NAME LIKE '김%'")
 
 # 예 : ‘수’로 끝나는 사람만 조회하기
-sqldf("SELECT * FROM student WHERE NAME LIKE '%수")
+sqldf("SELECT * FROM student WHERE NAME LIKE '%수'")
 
 # 예 : 이름에 ‘수’가 들어가는 사람만 조회하기
-sqldf("SELECT * FROM student WHERE NAME LIKE '%수%")
+sqldf("SELECT * FROM student WHERE NAME LIKE '%수%'")
 
 # 집계 함수
 # 예 : 벡터 안에 스칼라 숫자 세기
-sqldf("SELECT COUNT(STUDENT_NO) FROM student WHERE NAME LIKE '%수%")
+sqldf("SELECT COUNT(STUDENT_NO) FROM student")
 
 # 예 : 반별 학생 수 조회하기
-sqldf("SELECT COUNT(STUDENT_NO) FROM student WHERE NAME LIKE '%수%")
+sqldf("SELECT CLASS_NO, COUNT(CLASS_NO) FROM student GROUP BY CLASS_NO")
+
+# 예 : A반과 B반별 학생 수 조회하기
+sqldf("SELECT CLASS_NO, COUNT(CLASS_NO) 
+         FROM student 
+        GROUP BY CLASS_NO 
+       HAVING CLASS_NO ='A' OR CLASS_NO = 'B'")
 
