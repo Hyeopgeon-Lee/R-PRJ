@@ -2,10 +2,10 @@ library("readxl")
 library("sqldf")
 
 # 엑셀 파일의 내용을 Student 변수에 데이터프레임 구조로 저장하기
-student = read_excel(path="data/student.xlsx",  sheet="Sheet1", col_names=TRUE)
+student = read_excel("data/student.xlsx",  sheet="Sheet1")
 
 # 이름, 나이 조회
-sqldf("SELECT NAME, AGE FROM student")
+sqldf("SELECT 이름, 나이 FROM student")
 
 # 출력 결과
 # NAME AGE
