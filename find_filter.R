@@ -7,9 +7,10 @@ library("dplyr")
 studentList <- read_excel("data/studentlist.xlsx", sheet = "Sheet1")
 
 # 가장 많은 나이
-maxAge = max(age)
+maxAge = max(studentList$나이)
 
 filter(studentList,studentList$나이==maxAge)
+
 
 
 
