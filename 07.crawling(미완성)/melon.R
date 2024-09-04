@@ -4,6 +4,7 @@ install.packages("dplyr")
 install.packages("curl")
 
 # 패키지 로드
+library(openxlsx)
 library(rvest)
 library(dplyr)
 library(curl)
@@ -29,7 +30,7 @@ title <- webpage %>%
 
 title
 
-# 가수 이름 결합
+# 가수 이름이 여러개 있는 경우가 있어, 여러 명인 경우 , 구분하여 표시
 artist <- webpage %>%
   html_nodes('div.ellipsis.rank02 span.checkEllipsis') %>%
   lapply(function(node) {
@@ -48,4 +49,7 @@ melon_chart <- data.frame(순위 = rank, 노래 = title, 가수 = artist, string
 
 # 결과 확인
 View(melon_chart)
+
+# 엑셀 파일 생성성
+write.xlsx(melon_chart, sheetName="Sheet1", file = "data/melon_rank_20240904.xlsx")
 
