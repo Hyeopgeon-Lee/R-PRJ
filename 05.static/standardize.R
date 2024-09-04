@@ -29,3 +29,9 @@ students$비교_결과 <- ifelse(students$토플_표준화 > students$토익_표
 
 # 데이터프레임 출력
 View(students)
+
+correlation <- cor(students$토플_표준화, students$토익_표준화)
+
+# 결과 출력
+print("토플과 토익 점수의 상관 계수 : ")
+print(correlation)

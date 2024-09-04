@@ -1,5 +1,10 @@
+# ggplot2 패키지 설치 (이미 설치된 경우 생략 가능)
+install.packages("ggplot2")
 
-# 엑셀 파일 읽기 패키지 로드드
+# ggplot2 패키지 로드
+library(ggplot2)
+
+# 엑셀 파일 읽기 패키지 로드
 library(readxl)
 
 # 이전 실습에서 생성한 엑셀 파일 읽기
@@ -24,14 +29,13 @@ freq_df <- data.frame(
   영어 = as.vector(english_freq_table)
 )
 
-# 상대 도수 계산 
-freq_df$수학_상대도수 <- prop.table(math_freq_table)
-freq_df$영어_상대도수 <- prop.table(english_freq_table)
-
-# 누적 도수 계산
-freq_df$수학_누적도수 <- cumsum(freq_df$수학_상대도수)
-freq_df$영어_누적도수 <- cumsum(freq_df$영어_상대도수)
-
 # 도수분포표 출력
 View(freq_df)
+
+# 도수분포표 차트 그리기
+ggplot(data = freq_df, aes(x = 구간)) +
+  geom_bar(aes(y = 수학), stat = "identity", position = "dodge", fill = "blue") +
+  geom_bar(aes(y = 영어), stat = "identity", position = "dodge", fill = "red") +
+  labs(title = "수학 및 영어 점수 도수분포표", x = "점수 구간", y = "학생 수") +
+  theme_minimal()
 
