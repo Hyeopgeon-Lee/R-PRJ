@@ -18,13 +18,13 @@
 
 ## 폴더 설명
 
-# 01.basi : R 기초 문법
-# 02.vector : 벡터 기초 문법
-# 03.list : list 기초 문법
-# 04.dataframe : dataframe 기초 문법 및 응용
-# 05.static : 통계(상관계수, 산포도, 표준편차, 표준화, 공분산)
-# 06.sql : SQL을 활용한 기초 및 응용 데이터분석
-# 07.crawling : 웹크롤링 준비중
+### 01.basic : R 기초 문법
+### 02.vector : 벡터 기초 문법
+### 03.list : list 기초 문법
+### 04.dataframe : dataframe 기초 문법 및 응용
+### 05.static : 통계(상관계수, 산포도, 표준편차, 표준화, 공분산)
+### 06.sql : SQL을 활용한 기초 및 응용 데이터분석
+### 07.crawling : 웹크롤링 준비중
 
 * 학과 수업에 대한 궁금증은 학과 오픈채팅방에 문의 : https://open.kakao.com/o/gEd0JIad
 
