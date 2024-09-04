@@ -7,7 +7,7 @@ library(rvest)
 library(dplyr)
 
 # 멜론 차트 URL
-url <- 'https://www.melon.com/chart/index.htm'
+url <-  <- read_html(curl('http://benchmarkrealestate.com/', handle = new_handle("useragent" = "Mozilla/5.0")))
 
 # 웹페이지 읽기
 webpage <- read_html(url)
