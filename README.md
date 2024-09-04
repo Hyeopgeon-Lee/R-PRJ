@@ -27,7 +27,7 @@
 ### 04.dataframe : dataframe 기초 문법 및 응용
 ### 05.static : 통계(상관계수, 산포도, 표준편차, 표준화, 공분산)
 ### 06.sql : SQL을 활용한 기초 및 응용 데이터분석
-### 07.crawling : 웹크롤링 준비중
+### 07.crawling : 멜론 차트 웹크롤링하여 데이터분석
 ### data : 실습데이터(엑셀, TXT, CSV 파일)
 
 * 학과 수업에 대한 궁금증은 학과 오픈채팅방에 문의 : https://open.kakao.com/o/gEd0JIad
